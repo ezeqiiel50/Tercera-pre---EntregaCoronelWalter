@@ -1,2 +1,2 @@
-# Tercera-pre---EntregaCoronelWalter
+# Tercera-pre-EntregaCoronelWalter
 Proyecto Python 
