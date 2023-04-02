@@ -1,0 +1,36 @@
+{% extends "AppShortStories/index.html" %}
+
+{% block body %}
+
+<div class="container w-50 p-3">
+    <div class="card">
+        <div class="card-header">
+            Ingrese un nuevo Author
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <form method="Post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="id_{{form.nombre.name}}" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" maxlength="50" required="" name="{{form.nombre.name}}" id="id_{{form.nombre.name}}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_{{form.apellido.name}}" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" maxlength="50" required="" name="{{form.apellido.name}}" id="id_{{form.apellido.name}}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="{{form.email.name}}">Email</label>
+                            <input type="email" class="form-control" maxlength="50" required="" name="{{form.email.name}}" id="id_{{form.email.name}}">
+                         </div>
+                        <div class="mb-3">
+                            <label for="{{form.alias.name}}">Apodo</label>
+                            <input type="text" class="form-control" maxlength="50" required="" name="{{form.alias.name}}" id="id_{{form.alias.name}}">
+                        </div>
+                <input type="submit" class="btn btn-outline-secondary" value="Agregar">
+            </form>
+            </blockquote>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "AppShortStories/index.html" %}
+
+{% block body %}
+<div class="container w-50 p-3">
+    <form>
+        <div class="input-group mb-3">
+            <input name="criterio_descripcion" maxlength="50" type="text" class="form-control" placeholder="Buscar por descripcion" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Buscar</button>
+          </div>
+    </form>
+</div>
+<!-- Modal -->
+<div class="container w-50">
+    <div class="row justify-content-center align-items-center" id="tabla">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Activo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for genero in generos %}
+                <tr>
+                    <td>#</td>
+                    <td>{{genero.descripcion}}</td>
+                    <td>{{genero.estado}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

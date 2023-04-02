@@ -1,3 +1,6 @@
 from django.contrib import admin
+from AppShortStories.models import Genero , Author, ShortStories
 
-# Register your models here.
+admin.site.register(Genero)
+admin.site.register(Author)
+admin.site.register(ShortStories)
